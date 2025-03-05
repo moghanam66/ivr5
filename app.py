@@ -4,7 +4,7 @@ from botbuilder.integration.aiohttp import BotFrameworkHttpAdapter
 from botbuilder.schema import Activity
 import asyncio
 import logging
-
+from config import DefaultConfig
 from bot import VoiceBot
 
 bot = VoiceBot()
