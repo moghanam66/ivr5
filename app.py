@@ -7,6 +7,20 @@ import logging
 from config import DefaultConfig
 from bot import VoiceBot
 
+import sys
+import traceback
+from datetime import datetime
+
+from aiohttp.web import Request, Response, json_response
+from botbuilder.core import (BotFrameworkAdapter, BotFrameworkAdapterSettings,
+                             TurnContext)
+from botbuilder.core.integration import aiohttp_error_middleware
+from botbuilder.schema import Activity, ActivityTypes
+
+from bot import MyBot
+from config import DefaultConfig
+
+
 bot = VoiceBot()
 
 app = web.Application()
